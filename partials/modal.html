@@ -1,0 +1,66 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal__button-close" data-modal-close>
+        <svg width="11" height="11">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h3 class="modal__title">Залиште свої дані, ми вам передзвонимо</h3>
+      <form>
+        <div class="modal__form-item">
+          <label class="modal__subtitle">Ім'я
+            <div class="modal__div">
+              <input type="text" name="modal-name" placeholder=" " id="name" class="modal__input" />
+              <svg class="modal__icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </label>
+        </div>
+
+        <div class="modal__form-item">
+          <label class="modal__subtitle">Телефон
+            <div class="modal__div">
+              <input type="text" name="modal-tel" placeholder=" " class="modal__input" />
+              <svg class="modal__icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-number"></use>
+              </svg>
+            </div>
+          </label>
+        </div>
+
+        <div class="modal__form-item">
+          <label class="modal__subtitle">Пошта
+            <div class="modal__div">
+              <input type="text" name="modal-email" placeholder=" " class="modal__input" />
+              <svg class="modal__icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email-modal"></use>
+              </svg>
+            </div>
+          </label>
+        </div>
+
+        <div class="modal__comment-div">
+          <label class="modal__subtitle">Коментар
+            <textarea name="feedback" rows="5" placeholder="Введіть текст"
+              class="modal__comment"></textarea>
+          </label>
+        </div>
+
+        <div class="check">
+          <label class="check__text">
+            <input type="checkbox" name="modal-check" value="sports" class="check__input" />
+            <span class="check__icon"></span>
+            Погоджуюся з розсилкою та приймаю
+            <a href="" class="check__contrast">Умови договору</a>
+          </label>
+        </div>
+        
+        <button type="submit" class="button modal__button button--contrast-theme">
+          <span class="button__text button__text--contrast-theme">Відправити</span>
+        </button>
+
+      </form>
+
+    </div>
+  </div>

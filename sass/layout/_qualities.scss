@@ -1,0 +1,31 @@
+/*Розміри li*/
+.qualities {
+    width: 270px;
+}
+
+/*Заголовки h3*/
+.qualities__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+/*Текст p*/
+.qualities__text {
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--lightGrey);
+}
+
+/* Прямокутники бекграунд іконок */
+.qualities__icon {
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}

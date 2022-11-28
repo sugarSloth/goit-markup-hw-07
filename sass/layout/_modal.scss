@@ -1,0 +1,213 @@
+/* Загальне з фоном */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity var(--transition);
+}
+
+/* Приховування коли вікно неактивне */
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Вікно загальне */
+.modal {
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    scale: 1;
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform var(--transitionLong), opacity var(--transitionLong);
+}
+
+/* Приховування вікна */
+.backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-70%);
+}
+
+/* Заголовок */
+.modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--grey);
+    margin: 0 0 12px;
+}
+
+.modal__form-item {
+    margin-bottom: 10px;
+}
+
+/* Текст над полями вводу */
+.modal__subtitle {
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: var(--lightGrey);
+}
+
+/* Поля вводу */
+.modal__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    resize: none;
+    cursor: pointer;
+    transition: border var(--transition);
+    outline: none;
+}
+
+/* Коробочка для налаштування розташування іконок */
+.modal__div {
+    position: relative;
+    margin-top: 4px;
+    transition: fill var(--transition), border var(--transition);
+}
+
+.modal__input:focus {
+    border: 1px solid var(--contrast);
+}
+
+/* Іконки */
+.modal__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill var(--transition);
+    cursor: pointer;
+}
+
+.modal__input:focus+.modal__icon {
+    fill: var(--contrast);
+}
+
+/* Коментар поле вводу */
+.modal__comment {
+    display: block;
+    width: 100%;
+    height: 120px;
+    margin-top: 4px;
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: var(--black);
+    resize: none;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border var(--transition);
+    outline: none;
+}
+
+.modal__comment:focus {
+    border: 1px solid var(--contrast);
+}
+
+.modal__comment-div {
+    margin-bottom: 20px;
+}
+
+/* Поле Погоджуюся */
+.check {
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Поле вводу */
+.check__input {
+    appearance: none;
+    position: absolute;
+    fill: var(--grey);
+    width: 16px;
+    height: 15px;
+    padding: 0;
+    margin: 0 7px 0 0;
+    transition: border var(--transition);
+}
+
+/* Іконка галочка */
+.check__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    cursor: pointer;
+    background-image: url('../images/Check-na.svg');
+}
+
+.check__input:checked+.check__icon {
+    background-image: url('../images/iconCheck.svg');
+}
+
+/* Текст Погоджуюся */
+.check__text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.7143;
+    letter-spacing: 0.03em;
+    color: var(--lightGrey);
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Умови договору колір */
+.check__contrast {
+    color: rgba(33, 150, 243, 1);
+    margin-left: 4px;
+}
+
+.modal__button {
+    margin: 0 auto;
+    padding: 10px 52px;
+}
+
+/* Кнопка закривання */
+.modal__button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    fill: var(--black);
+    transition: fill var(--transition);
+}
+
+.modal__button-close:hover,
+.modal__button-close:focus {
+    fill: var(--contrast);
+}

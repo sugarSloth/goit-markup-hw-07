@@ -1,0 +1,466 @@
+@charset "UTF-8";
+:root {
+  --contrast: #2196F3;
+  --white: #FFFFFF;
+  --darkerWhite: #F5F4FA;
+  --black: rgba(0, 0, 0, 1);
+  --backGrey: #2F303A;
+  --grey: #212121;
+  --lightGrey: #757575;
+  --weirdGrey: rgba(255, 255, 255, 0.6);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transitionLong: 300ms ease;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* Логотип загальне */
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  width: 145px;
+}
+
+.logo__contrast {
+  color: var(--contrast);
+}
+
+.hero {
+  max-width: 1600px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 200px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero__title {
+  width: 696px;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.364;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #000000;
+}
+
+.hero__button {
+  padding: 10px 32px;
+  margin-top: 30px;
+}
+
+/*Розміри li*/
+.qualities {
+  width: 270px;
+}
+
+/*Заголовки h3*/
+.qualities__title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+/*Текст p*/
+.qualities__text {
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--lightGrey);
+}
+
+/* Прямокутники бекграунд іконок */
+.qualities__icon {
+  height: 120px;
+  background: #F5F4FA;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Скасування верхнього відступу */
+.about {
+  padding-top: 0;
+}
+
+/* Прив'язка для фону */
+.about__item {
+  position: relative;
+}
+
+/* Перекриваючий фон */
+.about__overlay {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Текст */
+.about__overlay-text {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* Секція загальне */
+.section-team {
+  background: var(--darkerWhite);
+  padding: 94px 0;
+}
+
+/* Текст h3 p */
+.team {
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Фон карток li */
+.team-color {
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Імена h3 */
+.team-names {
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Посади p */
+.team-position {
+  color: var(--lightGrey);
+  margin-bottom: 16px;
+}
+
+/* Відступи для текстової частини карток */
+.team-padding {
+  padding: 30px 0;
+}
+
+/* li з іконками контактів */
+.contacts-items {
+  width: 44px;
+  height: 44px;
+}
+
+/* Посилання з іконками контактами Головна */
+.contacts-link {
+  border-radius: 50%;
+  fill: #AFB1B8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color var(--transition), fill var(--transition);
+  transition: background-color var(--transition), fill var(--transition);
+}
+
+.contacts-link:focus,
+.contacts-link:hover {
+  background-color: var(--contrast);
+  fill: var(--white);
+}
+
+/* Заливка іконок Футер */
+.footer-contact-item {
+  fill: var(--white);
+}
+
+/* Загальне з фоном */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity var(--transition);
+  transition: opacity var(--transition);
+}
+
+/* Приховування коли вікно неактивне */
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Вікно загальне */
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  scale: 1;
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  -webkit-transition: opacity var(--transitionLong), -webkit-transform var(--transitionLong);
+  transition: opacity var(--transitionLong), -webkit-transform var(--transitionLong);
+  transition: transform var(--transitionLong), opacity var(--transitionLong);
+  transition: transform var(--transitionLong), opacity var(--transitionLong), -webkit-transform var(--transitionLong);
+}
+
+/* Приховування вікна */
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-70%);
+          transform: translateX(-50%) translateY(-70%);
+}
+
+/* Заголовок */
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--grey);
+  margin: 0 0 12px;
+}
+
+.modal__form-item {
+  margin-bottom: 10px;
+}
+
+/* Текст над полями вводу */
+.modal__subtitle {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: var(--lightGrey);
+}
+
+/* Поля вводу */
+.modal__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  resize: none;
+  cursor: pointer;
+  -webkit-transition: border var(--transition);
+  transition: border var(--transition);
+  outline: none;
+}
+
+/* Коробочка для налаштування розташування іконок */
+.modal__div {
+  position: relative;
+  margin-top: 4px;
+  -webkit-transition: fill var(--transition), border var(--transition);
+  transition: fill var(--transition), border var(--transition);
+}
+
+.modal__input:focus {
+  border: 1px solid var(--contrast);
+}
+
+/* Іконки */
+.modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
+  cursor: pointer;
+}
+
+.modal__input:focus + .modal__icon {
+  fill: var(--contrast);
+}
+
+/* Коментар поле вводу */
+.modal__comment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  resize: none;
+  cursor: pointer;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  -webkit-transition: border var(--transition);
+  transition: border var(--transition);
+  outline: none;
+}
+
+.modal__comment:focus {
+  border: 1px solid var(--contrast);
+}
+
+.modal__comment-div {
+  margin-bottom: 20px;
+}
+
+/* Поле Погоджуюся */
+.check {
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Поле вводу */
+.check__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  fill: var(--grey);
+  width: 16px;
+  height: 15px;
+  padding: 0;
+  margin: 0 7px 0 0;
+  -webkit-transition: border var(--transition);
+  transition: border var(--transition);
+}
+
+/* Іконка галочка */
+.check__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  cursor: pointer;
+  background-image: url("../images/Check-na.svg");
+}
+
+.check__input:checked + .check__icon {
+  background-image: url("../images/iconCheck.svg");
+}
+
+/* Текст Погоджуюся */
+.check__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1.7143;
+  letter-spacing: 0.03em;
+  color: var(--lightGrey);
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Умови договору колір */
+.check__contrast {
+  color: rgb(33, 150, 243);
+  margin-left: 4px;
+}
+
+.modal__button {
+  margin: 0 auto;
+  padding: 10px 52px;
+}
+
+/* Кнопка закривання */
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  padding: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  fill: var(--black);
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
+}
+
+.modal__button-close:hover,
+.modal__button-close:focus {
+  fill: var(--contrast);
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+// utils styles
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
+// components styles
+@import './components/logo';
+
+// layout styles
+@import './layout/header';
+@import './layout/hero';
+@import './layout/qualities';
+@import './layout/about';
+@import './layout/team';
+@import './layout/customers';
+@import './layout/footer';
+@import './layout/modal';
