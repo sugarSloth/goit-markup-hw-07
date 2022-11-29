@@ -1,0 +1,120 @@
+/* Загальне */
+.footer {
+    background: var(--backGrey);
+    padding: 60px 0;
+}
+
+/* ФлексБокс */
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+/* Ширина блока з лого */
+.footer-fcont {
+    min-width: 231px;
+}
+
+/* Логотип марджіни */
+.footer__logo {
+    color: var(--white);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Заголовок ПРИЄДНУЙТЕСЬ */
+.footer__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0 0 20px;
+}
+
+/* Адреса імейл телефон */
+.footer__link {
+    font-style: normal;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+}
+
+.footer__link--white {
+    color: var(--white);
+}
+
+.footer__link--grey {
+    color: var(--weirdGrey);
+}
+
+/* Відступи адреса імейл телефон */
+.footer-indentation-item {
+    margin-top: 9px;
+}
+
+/* Іконки футер коробочка */
+.footer__join {
+    margin-left: 70px;
+}
+
+/* Іконки li */
+.contacts-items-footer {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: var(--white);
+    transition: background-color var(--transition);
+}
+
+.contacts-items-footer:focus,
+.contacts-items-footer:hover {
+    background-color: var(--contrast);
+}
+
+/* Заливка іконок Футер */
+.footer-contact-item {
+    fill: var(--white);
+}
+
+.footer-input {
+    margin-left: 93px;
+}
+
+.footer-mail {
+    display: flex;
+    align-items: center;
+}
+
+.footer-input-style {
+    width: 358px;
+    height: 50px;
+    outline: 0;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 15px 16px;
+    margin-right: 12px;
+    color: var(--white);
+    cursor: pointer;
+    transition: border var(--transition);
+}
+
+.footer-input-style:focus {
+    border: 1px solid var(--contrast);
+}
+
+.footer__button {
+    padding: 10px 28px;
+    margin: 0;
+}
+
+.button__icon {
+    fill: var(--white);
+    margin: 0 0 0 10px;
+}

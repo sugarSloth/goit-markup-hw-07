@@ -1,0 +1,83 @@
+/* Рамка */
+.header {
+    border: 1px solid #ECECEC;
+    height: 80px;
+}
+
+/* ФлексБокс для загального div і списків */
+.header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+/* ФлексБокс для лого і списку сторінок */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 93px;
+    color: var(--black);
+}
+
+/* Розміри для списку сторінок */
+.nav__list--pages {
+    width: 281px;
+    margin-right: 318px;
+}
+
+/*Списки*/
+.nav__link {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.nav__link--current {
+    color: var(--contrast);
+}
+
+.nav__link--current::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    transform: translateX(-50%) scale(1);
+    display: block;
+    width: 105%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--contrast);
+    transition: 250ms;
+}
+
+.nav__link--ncurrent {
+    color: var(--grey);
+}
+
+.nav__item {
+    position: relative;
+    padding: 32px 0;
+}
+
+/* Розміри для мейла і телефона */
+.nav__list--contacts {
+    width: 333px;
+}
+
+/* Іконки заливка кольору тексту */
+.header__icons {
+    fill: currentColor;
+}
+
+/* Вирівнювання іконок в ряд з текстом */
+.header__contacts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--lightGrey);
+}

@@ -1,17 +1,18 @@
 // utils styles
 @import './utils/variables';
 @import './utils/visually-hidden';
-@import './utils/mixins';
+@import './utils/base';
 
 // components styles
 @import './components/logo';
 
 // layout styles
 @import './layout/header';
+@import './layout/footer';
 @import './layout/hero';
+@import './layout/modal';
 @import './layout/qualities';
 @import './layout/about';
 @import './layout/team';
 @import './layout/customers';
-@import './layout/footer';
-@import './layout/modal';
+@import './layout/portfolio';

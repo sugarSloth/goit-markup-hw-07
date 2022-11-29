@@ -1,0 +1,121 @@
+.filters {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.filters__button {
+    padding: 6px 22px;
+    transition: color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.filters__button:focus,
+.filters__button:hover {
+    background: var(--contrast);
+    color: var(--white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button--grey-theme {
+    background: var(--darkerWhite);
+    transition: background var(--transition);
+}
+
+.button--grey-theme:hover,
+.button--grey-theme:focus {
+    background: var(--contrast);
+}
+
+.button__text--grey-theme {
+    font-weight: 500;
+    line-height: 1.625;
+    color: var(--grey);
+    letter-spacing: 0.03em;
+    transition: color var(--transition);
+}
+
+.button--grey-theme:hover .button__text--grey-theme,
+.button--grey-theme:focus .button__text--grey-theme {
+    color: var(--white);
+}
+
+/* Роботи ul */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+/*Роботи li*/
+.portfolio-list {
+    flex-basis: calc((100% - 60px) / 3);
+    border: 1px solid #EEEEEE;
+    transition: box-shadow var(--transition);
+}
+
+.portfolio-list:focus,
+.portfolio-list:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+/* Синій фон і картинка разом */
+.project-div-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Текст на синьому фоні */
+.project-overlay-text {
+    font-size: 18px;
+    line-height: 1.556;
+    letter-spacing: 0.03em;
+    color: var(--white);
+}
+
+/* Заголовки назви */
+.portfolio-title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--grey);
+    margin: 0;
+}
+
+/* Підзаголовки тип */
+.portfolio-type {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.865;
+    letter-spacing: 0.03em;
+    color: var(--lightGrey);
+}
+
+/* Відступи для контейнерів заголовки підзаголовки */
+.portfolio-indentation-text {
+    margin: 0;
+    padding: 20px 24px;
+}
+
+/* Синій виїжджаючий фон */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    transform: translateY(101%);
+    transition: transform var(--transition);
+}
+
+.portfolio-list:hover .overlay {
+    transform: translateY(0);
+}
