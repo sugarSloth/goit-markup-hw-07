@@ -1,10 +1,17 @@
 // utils styles
 @import './utils/variables';
 @import './utils/visually-hidden';
-@import './utils/base';
+
+// base styles
+@import './base/reset';
+@import './base/base';
 
 // components styles
+@import './components/section';
+@import './components/contacts';
 @import './components/logo';
+@import './components/img';
+@import './components/button';
 
 // layout styles
 @import './layout/header';

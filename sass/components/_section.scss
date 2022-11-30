@@ -1,0 +1,25 @@
+/* Секції */
+.section {
+    padding: 94px 0;
+}
+
+/* Заголовки h2 секцій */
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+/* Відступ вниз від заголовків h2 */
+.section-margin {
+    margin-top: 50px;
+}
+
+.section-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}

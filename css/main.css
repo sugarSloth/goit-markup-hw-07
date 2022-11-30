@@ -37,25 +37,10 @@ p {
   padding: 0;
 }
 
-body {
-  font-family: "Roboto";
-  font-size: 14px;
-  color: var(--grey);
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Лінки без підкреслення */
 .link {
   text-decoration: none;
+  -webkit-transition: color var(--transition);
   transition: color var(--transition);
 }
 .link:hover, .link:focus {
@@ -69,6 +54,22 @@ img {
   padding: 0;
 }
 
+body {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: var(--grey);
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 /* Всі контейнери */
 .container {
   width: 1200px;
@@ -80,41 +81,6 @@ img {
 /* Секції */
 .section {
   padding: 94px 0;
-}
-
-/* Кнопки */
-.button {
-  font-family: inherit;
-  margin: 0 auto;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  border: 0;
-}
-
-.button__text {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-/* ---------------MAIN--------------- */
-.button--contrast-theme {
-  background: var(--contrast);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transition);
-}
-.button--contrast-theme:hover, .button--contrast-theme:focus {
-  background: #188CE8;
-}
-
-.button__text--contrast-theme {
-  font-weight: 700;
-  line-height: 1.865;
-  color: var(--white);
-  letter-spacing: 0.06em;
 }
 
 /* Заголовки h2 секцій */
@@ -132,18 +98,24 @@ img {
   margin-top: 50px;
 }
 
-/* ФлексБокс для іконок контактів */
-.contacts-ul {
+.section-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
-/* flexbox списки main*/
-.flexbox-list {
+/* ФлексБокс для іконок контактів */
+.contacts-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
 }
 
 /* Логотип загальне */
@@ -160,6 +132,57 @@ img {
   color: var(--contrast);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Кнопки */
+.button {
+  font-family: inherit;
+  margin: 0 auto;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  border: 0;
+}
+
+.button__text {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+/* ---------------MAIN--------------- */
+.button--contrast-theme {
+  background: var(--contrast);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: background-color var(--transition);
+  transition: background-color var(--transition);
+}
+.button--contrast-theme:hover, .button--contrast-theme:focus {
+  background: #188CE8;
+}
+
+.button__text--contrast-theme {
+  font-weight: 700;
+  line-height: 1.865;
+  color: var(--white);
+  letter-spacing: 0.06em;
+}
+
 /* Рамка */
 .header {
   border: 1px solid #ECECEC;
@@ -168,17 +191,28 @@ img {
 
 /* ФлексБокс для загального div і списків */
 .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 80px;
 }
 
 /* ФлексБокс для лого і списку сторінок */
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__logo {
@@ -217,12 +251,14 @@ img {
   position: absolute;
   left: 50%;
   bottom: 2px;
-  transform: translateX(-50%) scale(1);
+  -webkit-transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(1);
   display: block;
   width: 105%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--contrast);
+  -webkit-transition: 250ms;
   transition: 250ms;
 }
 
@@ -232,8 +268,12 @@ img {
 
 /* Вирівнювання іконок в ряд з текстом */
 .header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   color: var(--lightGrey);
 }
@@ -251,8 +291,12 @@ img {
 
 /* ФлексБокс */
 .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 /* Ширина блока з лого */
@@ -295,8 +339,13 @@ img {
 
 /* Відступи адреса імейл телефон */
 .footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 9px;
 }
 
@@ -310,11 +359,18 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--white);
+  -webkit-transition: background-color var(--transition);
   transition: background-color var(--transition);
 }
 .join__item:focus, .join__item:hover {
@@ -331,8 +387,12 @@ img {
 }
 
 .footer__mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__input--style {
@@ -341,12 +401,14 @@ img {
   outline: 0;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 15px 16px;
   margin-right: 12px;
   color: var(--white);
   cursor: pointer;
+  -webkit-transition: border var(--transition);
   transition: border var(--transition);
 }
 .footer__input--style:focus {
@@ -365,6 +427,7 @@ img {
 
 .hero {
   max-width: 1600px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -402,6 +465,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  -webkit-transition: opacity var(--transition);
   transition: opacity var(--transition);
   /* Приховування коли вікно неактивне */
 }
@@ -417,20 +481,26 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   scale: 1;
   width: 528px;
   min-height: 581px;
   background-color: var(--white);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  -webkit-transition: opacity var(--transitionLong), -webkit-transform var(--transitionLong);
+  transition: opacity var(--transitionLong), -webkit-transform var(--transitionLong);
   transition: transform var(--transitionLong), opacity var(--transitionLong);
+  transition: transform var(--transitionLong), opacity var(--transitionLong), -webkit-transform var(--transitionLong);
 }
 
 /* Приховування вікна */
 .backdrop.is-hidden .modal {
   opacity: 0;
-  transform: translateX(-50%) translateY(-70%);
+  -webkit-transform: translateX(-50%) translateY(-70%);
+          transform: translateX(-50%) translateY(-70%);
 }
 
 /* Заголовок */
@@ -465,6 +535,7 @@ img {
   padding-left: 42px;
   resize: none;
   cursor: pointer;
+  -webkit-transition: border var(--transition);
   transition: border var(--transition);
   outline: none;
 }
@@ -476,6 +547,7 @@ img {
 .modal__div {
   position: relative;
   margin-top: 4px;
+  -webkit-transition: fill var(--transition), border var(--transition);
   transition: fill var(--transition), border var(--transition);
 }
 
@@ -484,7 +556,9 @@ img {
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: fill var(--transition);
   transition: fill var(--transition);
   cursor: pointer;
 }
@@ -508,6 +582,7 @@ img {
   cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  -webkit-transition: border var(--transition);
   transition: border var(--transition);
   outline: none;
 }
@@ -523,9 +598,15 @@ img {
 .check {
   margin-bottom: 30px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Поле вводу */
@@ -539,6 +620,7 @@ img {
   height: 15px;
   padding: 0;
   margin: 0 7px 0 0;
+  -webkit-transition: border var(--transition);
   transition: border var(--transition);
 }
 
@@ -558,8 +640,12 @@ img {
 
 /* Текст Погоджуюся */
 .check__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   line-height: 1.7143;
   letter-spacing: 0.03em;
@@ -590,11 +676,18 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   padding: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   fill: var(--black);
+  -webkit-transition: fill var(--transition);
   transition: fill var(--transition);
 }
 .modal__button-close:hover, .modal__button-close:focus {
@@ -627,9 +720,15 @@ img {
   height: 120px;
   background: #F5F4FA;
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -650,9 +749,15 @@ img {
   height: 70px;
   width: 100%;
   background-color: rgba(47, 48, 58, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Текст */
@@ -675,7 +780,8 @@ img {
 /* Фон карток li */
 .team__item {
   background-color: var(--white);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -711,9 +817,16 @@ img {
   height: 44px;
   border-radius: 50%;
   fill: #AFB1B8;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color var(--transition), fill var(--transition);
   transition: background-color var(--transition), fill var(--transition);
 }
 .team__contact-link:focus, .team__contact-link:hover {
@@ -723,8 +836,12 @@ img {
 
 /* Список іконок Флекс */
 .permanent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
 }
 
@@ -735,38 +852,58 @@ img {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   fill: #AFB1B8;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
+  -webkit-transition: border var(--transition), fill var(--transition), -webkit-filter var(--transition);
+  transition: border var(--transition), fill var(--transition), -webkit-filter var(--transition);
   transition: border var(--transition), fill var(--transition), filter var(--transition);
+  transition: border var(--transition), fill var(--transition), filter var(--transition), -webkit-filter var(--transition);
 }
 .permanent__link:focus, .permanent__link:hover {
   border: 1px solid var(--contrast);
   fill: var(--contrast);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .filters {
   margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
 }
 
 .filters__button {
   padding: 6px 22px;
+  -webkit-transition: color var(--transition), background var(--transition), -webkit-box-shadow var(--transition);
+  transition: color var(--transition), background var(--transition), -webkit-box-shadow var(--transition);
   transition: color var(--transition), background var(--transition), box-shadow var(--transition);
+  transition: color var(--transition), background var(--transition), box-shadow var(--transition), -webkit-box-shadow var(--transition);
 }
 .filters__button:focus, .filters__button:hover {
   background: var(--contrast);
   color: var(--white);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button--grey-theme {
   background: var(--darkerWhite);
+  -webkit-transition: background var(--transition);
   transition: background var(--transition);
 }
 .button--grey-theme:hover, .button--grey-theme:focus {
@@ -778,6 +915,7 @@ img {
   line-height: 1.625;
   color: var(--grey);
   letter-spacing: 0.03em;
+  -webkit-transition: color var(--transition);
   transition: color var(--transition);
 }
 
@@ -788,8 +926,11 @@ img {
 
 /* Роботи ul */
 .project__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style-type: none;
   gap: 30px;
   padding: 0;
@@ -798,12 +939,17 @@ img {
 
 /*Роботи li*/
 .project__item {
-  flex-basis: calc((100% - 60px) / 3);
+  -ms-flex-preferred-size: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
   border: 1px solid #EEEEEE;
+  -webkit-transition: -webkit-box-shadow var(--transition);
+  transition: -webkit-box-shadow var(--transition);
   transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), -webkit-box-shadow var(--transition);
 }
 .project__item:focus, .project__item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
 
@@ -855,10 +1001,15 @@ img {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
-  transform: translateY(101%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: -webkit-transform var(--transition);
+  transition: -webkit-transform var(--transition);
   transition: transform var(--transition);
+  transition: transform var(--transition), -webkit-transform var(--transition);
 }
 
 .project__item:hover .overlay {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */
