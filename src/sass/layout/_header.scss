@@ -30,6 +30,16 @@
     margin-right: 318px;
 }
 
+/* Розміри для мейла і телефона */
+.nav__list--contacts {
+    width: 333px;
+}
+
+.nav__item {
+    position: relative;
+    padding: 32px 0;
+}
+
 /*Списки*/
 .nav__link {
     font-weight: 500;
@@ -39,39 +49,24 @@
 
 .nav__link--current {
     color: var(--contrast);
-}
 
-.nav__link--current::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 2px;
-    transform: translateX(-50%) scale(1);
-    display: block;
-    width: 105%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--contrast);
-    transition: 250ms;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 2px;
+        transform: translateX(-50%) scale(1);
+        display: block;
+        width: 105%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--contrast);
+        transition: 250ms;
+    }
 }
 
 .nav__link--ncurrent {
     color: var(--grey);
-}
-
-.nav__item {
-    position: relative;
-    padding: 32px 0;
-}
-
-/* Розміри для мейла і телефона */
-.nav__list--contacts {
-    width: 333px;
-}
-
-/* Іконки заливка кольору тексту */
-.header__icons {
-    fill: currentColor;
 }
 
 /* Вирівнювання іконок в ряд з текстом */
@@ -80,4 +75,9 @@
     align-items: center;
     gap: 10px;
     color: var(--lightGrey);
+}
+
+/* Іконки заливка кольору тексту */
+.header__icons {
+    fill: currentColor;
 }

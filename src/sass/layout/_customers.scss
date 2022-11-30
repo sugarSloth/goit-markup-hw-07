@@ -1,5 +1,12 @@
+/* Список іконок Флекс */
+.permanent {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 /* Іконки */
-.permanent_items {
+.permanent__link {
     width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
@@ -10,18 +17,12 @@
     justify-content: center;
     cursor: pointer;
     transition: border var(--transition), fill var(--transition), filter var(--transition);
-}
 
-.permanent_items:focus,
-.permanent_items:hover {
-    border: 1px solid var(--contrast);
-    fill: var(--contrast);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+    &:focus,
+    &:hover {
+        border: 1px solid var(--contrast);
+        fill: var(--contrast);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
 
-/* Список іконок Флекс */
-.permanent_flex {
-    display: flex;
-    align-items: center;
-    gap: 30px;
 }

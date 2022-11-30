@@ -1,61 +1,56 @@
 /* Секція загальне */
-.section-team {
+.team {
     background: var(--darkerWhite);
     padding: 94px 0;
 }
 
+/* Фон карток li */
+.team__item {
+    background-color: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* Відступи для текстової частини карток */
+.team__text-block {
+    padding: 30px 0;
+}
+
 /* Текст h3 p */
-.team {
+.team__text {
     font-size: 16px;
     line-height: 1.1875;
     text-align: center;
     letter-spacing: 0.03em;
 }
 
-/* Фон карток li */
-.team-color {
-    background-color: var(--white);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-}
-
 /* Імена h3 */
-.team-names {
+.team__name {
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 /* Посади p */
-.team-position {
+.team__position {
     color: var(--lightGrey);
     margin-bottom: 16px;
 }
 
-/* Відступи для текстової частини карток */
-.team-padding {
-    padding: 30px 0;
-}
-
-/* li з іконками контактів */
-.contacts-items {
+/* Посилання з іконками контактами Головна */
+.team__contact-link {
     width: 44px;
     height: 44px;
-}
-
-/* Посилання з іконками контактами Головна */
-.contacts-link {
     border-radius: 50%;
     fill: #AFB1B8;
     align-items: center;
     display: flex;
     justify-content: center;
     transition: background-color var(--transition), fill var(--transition);
-}
 
-.contacts-link:focus,
-.contacts-link:hover {
-    background-color: var(--contrast);
-    fill: var(--white);
+    &:focus,
+    &:hover {
+        background-color: var(--contrast);
+        fill: var(--white);
+    }
 }
-

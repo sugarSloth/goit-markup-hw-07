@@ -9,16 +9,6 @@ p {
     padding: 0;
 }
 
-/* Інший сірий колір */
-.weird-grey {
-    color: var(--weirdGrey);
-}
-
-/* Біла частина логотипу */
-.white {
-    color: var(--white);
-}
-
 body {
     font-family: 'Roboto';
     font-size: 14px;
@@ -39,11 +29,11 @@ img {
 .link {
     text-decoration: none;
     transition: color var(--transition);
-}
 
-.link:hover,
-.link:focus {
-    color: var(--contrast);
+    &:hover,
+    &:focus {
+        color: var(--contrast);
+    }
 }
 
 /* Мінус маркування списків */
@@ -90,11 +80,11 @@ img {
     background: var(--contrast);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color var(--transition);
-}
 
-.button--contrast-theme:hover,
-.button--contrast-theme:focus {
-    background: #188CE8;
+    &:hover,
+    &:focus {
+        background: #188CE8;
+    }
 }
 
 .button__text--contrast-theme {

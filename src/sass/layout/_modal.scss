@@ -11,13 +11,13 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity var(--transition);
-}
 
-/* Приховування коли вікно неактивне */
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    /* Приховування коли вікно неактивне */
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 /* Вікно загальне */
@@ -76,6 +76,10 @@
     cursor: pointer;
     transition: border var(--transition);
     outline: none;
+
+    &:focus {
+        border: 1px solid var(--contrast);
+    }
 }
 
 /* Коробочка для налаштування розташування іконок */
@@ -83,10 +87,6 @@
     position: relative;
     margin-top: 4px;
     transition: fill var(--transition), border var(--transition);
-}
-
-.modal__input:focus {
-    border: 1px solid var(--contrast);
 }
 
 /* Іконки */
@@ -120,10 +120,10 @@
     border-radius: 4px;
     transition: border var(--transition);
     outline: none;
-}
 
-.modal__comment:focus {
-    border: 1px solid var(--contrast);
+    &:focus {
+        border: 1px solid var(--contrast);
+    }
 }
 
 .modal__comment-div {
@@ -205,9 +205,10 @@
     cursor: pointer;
     fill: var(--black);
     transition: fill var(--transition);
+
+    &:hover,
+    &:focus {
+        fill: var(--contrast);
+    }
 }
 
-.modal__button-close:hover,
-.modal__button-close:focus {
-    fill: var(--contrast);
-}
